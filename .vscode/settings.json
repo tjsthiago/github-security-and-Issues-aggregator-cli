@@ -1,0 +1,8 @@
+{
+    "chat.tools.terminal.autoApprove": {
+        "/^openspec list --json$/": {
+            "approve": true,
+            "matchCommandLine": true
+        }
+    }
+}
