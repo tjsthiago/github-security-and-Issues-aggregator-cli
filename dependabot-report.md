@@ -12,7 +12,7 @@
 
 **CVE:** CVE-2026-41305
 
-**Advisory:** https://github.com/grupoboticario/pl-plataforma-logistica-gbpl-audit/security/dependabot/102
+**Advisory:** https://github.com/nome-do-owner/pl-plataforma-logistica-gbpl-audit/security/dependabot/102
 
 **Summary:**
 
@@ -34,7 +34,7 @@ PostCSS has XSS via Unescaped </style> in its CSS Stringify Output
 
 **CVE:** CVE-2026-44728
 
-**Advisory:** https://github.com/grupoboticario/pl-plataforma-logistica-gbpl-audit/security/dependabot/101
+**Advisory:** https://github.com/nome-do-owner/pl-plataforma-logistica-gbpl-audit/security/dependabot/101
 
 **Summary:**
 
@@ -56,7 +56,7 @@ PostCSS has XSS via Unescaped </style> in its CSS Stringify Output
 
 **CVE:** CVE-2026-6322
 
-**Advisory:** https://github.com/grupoboticario/pl-plataforma-logistica-gbpl-audit/security/dependabot/100
+**Advisory:** https://github.com/nome-do-owner/pl-plataforma-logistica-gbpl-audit/security/dependabot/100
 
 **Summary:**
 
@@ -78,7 +78,7 @@ fast-uri vulnerable to host confusion via percent-encoded authority delimiters
 
 **CVE:** CVE-2026-6321
 
-**Advisory:** https://github.com/grupoboticario/pl-plataforma-logistica-gbpl-audit/security/dependabot/99
+**Advisory:** https://github.com/nome-do-owner/pl-plataforma-logistica-gbpl-audit/security/dependabot/99
 
 **Summary:**
 
@@ -98,7 +98,7 @@ fast-uri vulnerable to path traversal via percent-encoded dot segments
 
 **Severity:** MEDIUM
 
-**Advisory:** https://github.com/grupoboticario/pl-plataforma-logistica-gbpl-audit/security/dependabot/97
+**Advisory:** https://github.com/nome-do-owner/pl-plataforma-logistica-gbpl-audit/security/dependabot/97
 
 **Summary:**
 
@@ -120,7 +120,7 @@ follow-redirects leaks Custom Authentication Headers to Cross-Domain Redirect Ta
 
 **CVE:** CVE-2026-33750
 
-**Advisory:** https://github.com/grupoboticario/pl-plataforma-logistica-gbpl-audit/security/dependabot/88
+**Advisory:** https://github.com/nome-do-owner/pl-plataforma-logistica-gbpl-audit/security/dependabot/88
 
 **Summary:**
 

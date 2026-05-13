@@ -1,6 +1,6 @@
 ## Context
 
-This is a greenfield TypeScript CLI project. There is no prior codebase — the tool is being built from scratch following Domain-Driven Design (DDD) principles. The tool targets a private GitHub repository (`grupoboticario/pl-plataforma-logistica-fiscal-issuer`) and integrates with the GitHub REST API using a PAT for authentication. The output artifacts are Markdown files stored locally.
+This is a greenfield TypeScript CLI project. There is no prior codebase — the tool is being built from scratch following Domain-Driven Design (DDD) principles. The tool targets a private GitHub repository (`nome-do-owner/nome-do-repositorio`) and integrates with the GitHub REST API using a PAT for authentication. The output artifacts are Markdown files stored locally.
 
 The project runs on Node.js LTS and leverages native `fetch` for HTTP requests. All source code lives under `/src`, with test code under `/tests`. The architecture follows clean layering: domain → application → infrastructure → shared.
 

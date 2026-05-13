@@ -17,19 +17,19 @@ describe('loadEnvironment', () => {
 
   it('should load all required environment variables when present', () => {
     process.env.GITHUB_TOKEN = 'test-token-123';
-    process.env.GITHUB_OWNER = 'grupoboticario';
+    process.env.GITHUB_OWNER = 'nome-do-owner';
     process.env.GITHUB_REPO = 'test-repo';
 
     const env = loadEnvironment();
 
     expect(env.GITHUB_TOKEN).toBe('test-token-123');
-    expect(env.GITHUB_OWNER).toBe('grupoboticario');
+    expect(env.GITHUB_OWNER).toBe('nome-do-owner');
     expect(env.GITHUB_REPO).toBe('test-repo');
   });
 
   it('should throw ValidationError when GITHUB_TOKEN is missing', () => {
     delete process.env.GITHUB_TOKEN;
-    process.env.GITHUB_OWNER = 'grupoboticario';
+    process.env.GITHUB_OWNER = 'nome-do-owner';
     process.env.GITHUB_REPO = 'test-repo';
 
     expect(() => loadEnvironment()).toThrow(ValidationError);
@@ -47,7 +47,7 @@ describe('loadEnvironment', () => {
 
   it('should throw ValidationError when GITHUB_REPO is missing', () => {
     process.env.GITHUB_TOKEN = 'test-token';
-    process.env.GITHUB_OWNER = 'grupoboticario';
+    process.env.GITHUB_OWNER = 'nome-do-owner';
     delete process.env.GITHUB_REPO;
 
     expect(() => loadEnvironment()).toThrow(ValidationError);
@@ -56,7 +56,7 @@ describe('loadEnvironment', () => {
 
   it('should throw ValidationError with code VALIDATION_ERROR', () => {
     delete process.env.GITHUB_TOKEN;
-    process.env.GITHUB_OWNER = 'grupoboticario';
+    process.env.GITHUB_OWNER = 'nome-do-owner';
     process.env.GITHUB_REPO = 'test-repo';
 
     try {

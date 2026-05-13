@@ -1,7 +1,7 @@
 ---
 name: generateSecurityDependabotAggregationAsMarkdown
 description: 'Gera um relatório Markdown consolidado com todos os alertas abertos do Dependabot para um repositório GitHub. Use quando: quiser listar vulnerabilidades de dependências, gerar relatório de segurança Dependabot, auditar alertas de dependabot, agregar alertas de segurança em markdown, consultar alertas abertos de dependabot de um repositório.'
-argument-hint: 'Nome completo do repositório no formato owner/repo (ex: grupoboticario/pl-plataforma-logistica-generate-documents-children)'
+argument-hint: 'Nome completo do repositório no formato owner/repo (ex: nome-do-owner/nome-do-repositorio)'
 ---
 
 # Generate Security Dependabot Aggregation as Markdown
@@ -29,7 +29,7 @@ Consultar todos os alertas do Dependabot de um repositório GitHub via GitHub CL
 Se o usuário informou o repositório no prompt (formato `owner/repo`), use diretamente.
 Caso contrário, pergunte ao usuário:
 
-> "Qual é o repositório no formato `owner/repo`? (ex: `grupoboticario/meu-repositorio`)"
+> "Qual é o repositório no formato `owner/repo`? (ex: `nome-do-owner/nome-do-repositorio`)"
 
 ### Passo 2 — Buscar todos os alertas do Dependabot
 

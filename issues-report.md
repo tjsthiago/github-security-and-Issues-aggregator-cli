@@ -2,7 +2,7 @@
 
 **Issue #2598**
 
-**URL:** https://github.com/grupoboticario/pl-plataforma-logistica-fiscal-issuer/pull/2598
+**URL:** https://github.com/nome-do-owner/nome-do-repositorio/pull/2598
 
 **Description:**
 
@@ -14,14 +14,14 @@ Este PR foi criado automaticamente para sincronizar a branch hml com a branch re
 
 **Issue #2310**
 
-**URL:** https://github.com/grupoboticario/pl-plataforma-logistica-fiscal-issuer/issues/2310
+**URL:** https://github.com/nome-do-owner/nome-do-repositorio/issues/2310
 
 **Labels:** fortify, low
 
 **Description:**
 
 ## Localização no código
-https://github.com/grupoboticario/pl-plataforma-logistica-fiscal-issuer/blob/90bebfe9ca04ce63f6a3bc6c231d68d43f6d12d3/src/main/java/com/plataformalogistica/acoderefactoring/infra/driver/message/RequestNFSeIssuanceListener.java#L33
+https://github.com/nome-do-owner/nome-do-repositorio/blob/90bebfe9ca04ce63f6a3bc6c231d68d43f6d12d3/src/main/java/com/plataformalogistica/acoderefactoring/infra/driver/message/RequestNFSeIssuanceListener.java#L33
 ## Resumo (em inglês)
 The function receive() in RequestNFSeIssuanceListener.java reveals system data or debug information by calling error() on line 33. The information revealed by error() could help an adversary form a plan of attack.
 
@@ -94,7 +94,7 @@ Even brief error messages that do not reveal stack traces or database dumps can 
 > **Quer aprofundar seu entendimento sobre esta issue?** 🎓  
 > Consulte o tutor interativo para uma explicação mais detalhada.  
 >  
-> **[Acessar a explicação desta issue](https://redirect-service.security.grupoboticario.digital/redirect?source=platform-gandalf&target=https%3A%2F%2Fgandalf.grupoboticario.com.br%2Fteacher%3Fowner%3Dgrupoboticario%26repository_name%3Dpl-plataforma-logistica-fiscal-issuer%26tool_name%3Dfortify%26issue_id%3D21937759)**
+> **[Acessar a explicação desta issue](https://redirect-service.security.exemplo.digital/redirect?source=platform-gandalf&target=https%3A%2F%2Fgandalf.exemplo.com.br%2Fteacher%3Fowner%3Dnome-do-owner%26repository_name%3Dnome-do-repositorio%26tool_name%3Dfortify%26issue_id%3D21937759)**
 
 ---
 
@@ -102,14 +102,14 @@ Even brief error messages that do not reveal stack traces or database dumps can 
 
 **Issue #2309**
 
-**URL:** https://github.com/grupoboticario/pl-plataforma-logistica-fiscal-issuer/issues/2309
+**URL:** https://github.com/nome-do-owner/nome-do-repositorio/issues/2309
 
 **Labels:** fortify, low
 
 **Description:**
 
 ## Localização no código
-https://github.com/grupoboticario/pl-plataforma-logistica-fiscal-issuer/blob/90bebfe9ca04ce63f6a3bc6c231d68d43f6d12d3/src/main/java/com/plataformalogistica/acoderefactoring/infra/driven/client/apigee/ApigeeFeignClientGatewayImpl.java#L41
+https://github.com/nome-do-owner/nome-do-repositorio/blob/90bebfe9ca04ce63f6a3bc6c231d68d43f6d12d3/src/main/java/com/plataformalogistica/acoderefactoring/infra/driven/client/apigee/ApigeeFeignClientGatewayImpl.java#L41
 ## Resumo (em inglês)
 The function getToken() in ApigeeFeignClientGatewayImpl.java reveals system data or debug information by calling error() on line 41. The information revealed by error() could help an adversary form a plan of attack.
 
@@ -182,7 +182,7 @@ Even brief error messages that do not reveal stack traces or database dumps can 
 > **Quer aprofundar seu entendimento sobre esta issue?** 🎓  
 > Consulte o tutor interativo para uma explicação mais detalhada.  
 >  
-> **[Acessar a explicação desta issue](https://redirect-service.security.grupoboticario.digital/redirect?source=platform-gandalf&target=https%3A%2F%2Fgandalf.grupoboticario.com.br%2Fteacher%3Fowner%3Dgrupoboticario%26repository_name%3Dpl-plataforma-logistica-fiscal-issuer%26tool_name%3Dfortify%26issue_id%3D21937760)**
+> **[Acessar a explicação desta issue](https://redirect-service.security.exemplo.digital/redirect?source=platform-gandalf&target=https%3A%2F%2Fgandalf.exemplo.com.br%2Fteacher%3Fowner%3Dnome-do-owner%26repository_name%3Dnome-do-repositorio%26tool_name%3Dfortify%26issue_id%3D21937760)**
 
 ---
 
@@ -190,16 +190,16 @@ Even brief error messages that do not reveal stack traces or database dumps can 
 
 **Issue #2142**
 
-**URL:** https://github.com/grupoboticario/pl-plataforma-logistica-fiscal-issuer/issues/2142
+**URL:** https://github.com/nome-do-owner/nome-do-repositorio/issues/2142
 
 **Labels:** fortify, low
 
 **Description:**
 
 ## Localização no código
-https://github.com/grupoboticario/pl-plataforma-logistica-fiscal-issuer/blob/58745de45762b5d76e7f3c6af5d308014c4b4721/src/main/java/com/plataformalogistica/acoderefactoring/infra/driver/resource/exception/handler/CustomResponseEntityExceptionHandler.java#L31
+https://github.com/nome-do-owner/nome-do-repositorio/blob/58745de45762b5d76e7f3c6af5d308014c4b4721/src/main/java/com/plataformalogistica/acoderefactoring/infra/driver/resource/exception/handler/CustomResponseEntityExceptionHandler.java#L31
 ### Origem da Vulnerabilidade
-https://github.com/grupoboticario/pl-plataforma-logistica-fiscal-issuer/blob/58745de45762b5d76e7f3c6af5d308014c4b4721/src/main/java/com/plataformalogistica/acoderefactoring/infra/driver/resource/exception/handler/CustomResponseEntityExceptionHandler.java#L44
+https://github.com/nome-do-owner/nome-do-repositorio/blob/58745de45762b5d76e7f3c6af5d308014c4b4721/src/main/java/com/plataformalogistica/acoderefactoring/infra/driver/resource/exception/handler/CustomResponseEntityExceptionHandler.java#L44
 > Esta é a origem (fonte) da vulnerabilidade. Mesmo que o problema seja detectado em outro arquivo, a correção deve ser aplicada aqui, onde os dados potencialmente perigosos entram no sistema.
 **Dica:** verifique a pilha de chamadas deste método de origem. Isso ajudará na correção da vulnerabilidade.
 ## Resumo (em inglês)
@@ -274,7 +274,7 @@ Even brief error messages that do not reveal stack traces or database dumps can 
 > **Quer aprofundar seu entendimento sobre esta issue?** 🎓  
 > Consulte o tutor interativo para uma explicação mais detalhada.  
 >  
-> **[Acessar a explicação desta issue](https://redirect-service.security.grupoboticario.digital/redirect?source=platform-gandalf&target=https%3A%2F%2Fgandalf.grupoboticario.com.br%2Fteacher%3Fowner%3Dgrupoboticario%26repository_name%3Dpl-plataforma-logistica-fiscal-issuer%26tool_name%3Dfortify%26issue_id%3D20818423)**
+> **[Acessar a explicação desta issue](https://redirect-service.security.exemplo.digital/redirect?source=platform-gandalf&target=https%3A%2F%2Fgandalf.exemplo.com.br%2Fteacher%3Fowner%3Dnome-do-owner%26repository_name%3Dnome-do-repositorio%26tool_name%3Dfortify%26issue_id%3D20818423)**
 
 ---
 
@@ -282,14 +282,14 @@ Even brief error messages that do not reveal stack traces or database dumps can 
 
 **Issue #1936**
 
-**URL:** https://github.com/grupoboticario/pl-plataforma-logistica-fiscal-issuer/issues/1936
+**URL:** https://github.com/nome-do-owner/nome-do-repositorio/issues/1936
 
 **Labels:** fortify, low
 
 **Description:**
 
 ## Localização no código
-https://github.com/grupoboticario/pl-plataforma-logistica-fiscal-issuer/blob/b6cac0235fa4e502cef7ecd3b169621b507aad0d/src/main/java/com/plataformalogistica/entrypoint/resource/v1/FiscalDocumentNFSeWebhookResource.java#L76
+https://github.com/nome-do-owner/nome-do-repositorio/blob/b6cac0235fa4e502cef7ecd3b169621b507aad0d/src/main/java/com/plataformalogistica/entrypoint/resource/v1/FiscalDocumentNFSeWebhookResource.java#L76
 ## Resumo (em inglês)
 The function emissionDocument() in FiscalDocumentNFSeWebhookResource.java reveals system data or debug information by calling error() on line 76. The information revealed by error() could help an adversary form a plan of attack.
 
@@ -363,14 +363,14 @@ Even brief error messages that do not reveal stack traces or database dumps can 
 
 **Issue #1773**
 
-**URL:** https://github.com/grupoboticario/pl-plataforma-logistica-fiscal-issuer/issues/1773
+**URL:** https://github.com/nome-do-owner/nome-do-repositorio/issues/1773
 
 **Labels:** fortify, low
 
 **Description:**
 
 ## Localização no código
-https://github.com/grupoboticario/pl-plataforma-logistica-fiscal-issuer/blob/d68ce79bf78caee03e89c78b11bf0bc6e717fe42/src/main/java/com/plataformalogistica/core/usecase/ProcessCTeNormalUseCase.java#L80
+https://github.com/nome-do-owner/nome-do-repositorio/blob/d68ce79bf78caee03e89c78b11bf0bc6e717fe42/src/main/java/com/plataformalogistica/core/usecase/ProcessCTeNormalUseCase.java#L80
 ## Resumo (em inglês)
 The function execute() in ProcessCTeNormalUseCase.java reveals system data or debug information by calling warn() on line 80. The information revealed by warn() could help an adversary form a plan of attack.
 

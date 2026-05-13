@@ -74,9 +74,9 @@ describe('IssueTitle', () => {
 describe('IssueUrl', () => {
   it('should create a valid IssueUrl with github.com URL', () => {
     const url = IssueUrl.create(
-      'https://github.com/grupoboticario/repo/issues/42'
+      'https://github.com/nome-do-owner/repo/issues/42'
     );
-    expect(url.getValue()).toBe('https://github.com/grupoboticario/repo/issues/42');
+    expect(url.getValue()).toBe('https://github.com/nome-do-owner/repo/issues/42');
   });
 
   it('should throw when creating with invalid URL', () => {
@@ -91,25 +91,25 @@ describe('IssueUrl', () => {
 
   it('should trim whitespace from URL', () => {
     const url = IssueUrl.create(
-      '  https://github.com/grupoboticario/repo/issues/42  '
+      '  https://github.com/nome-do-owner/repo/issues/42  '
     );
     expect(url.getValue()).toBe(
-      'https://github.com/grupoboticario/repo/issues/42'
+      'https://github.com/nome-do-owner/repo/issues/42'
     );
   });
 
   it('should compare two IssueUrls for equality', () => {
-    const url1 = IssueUrl.create('https://github.com/grupoboticario/repo/issues/42');
-    const url2 = IssueUrl.create('https://github.com/grupoboticario/repo/issues/42');
-    const url3 = IssueUrl.create('https://github.com/grupoboticario/repo/issues/43');
+    const url1 = IssueUrl.create('https://github.com/nome-do-owner/repo/issues/42');
+    const url2 = IssueUrl.create('https://github.com/nome-do-owner/repo/issues/42');
+    const url3 = IssueUrl.create('https://github.com/nome-do-owner/repo/issues/43');
 
     expect(url1.equals(url2)).toBe(true);
     expect(url1.equals(url3)).toBe(false);
   });
 
   it('should convert to string', () => {
-    const url = IssueUrl.create('https://github.com/grupoboticario/repo/issues/42');
-    expect(url.toString()).toBe('https://github.com/grupoboticario/repo/issues/42');
+    const url = IssueUrl.create('https://github.com/nome-do-owner/repo/issues/42');
+    expect(url.toString()).toBe('https://github.com/nome-do-owner/repo/issues/42');
   });
 });
 
@@ -118,7 +118,7 @@ describe('Issue', () => {
     const issue = Issue.create(
       42,
       'Fix authentication bug',
-      'https://github.com/grupoboticario/repo/issues/42',
+      'https://github.com/nome-do-owner/repo/issues/42',
       'This is a serious bug',
       ['critical', 'security'],
       ['alice', 'bob']
@@ -127,7 +127,7 @@ describe('Issue', () => {
     expect(issue.getId().getValue()).toBe(42);
     expect(issue.getTitle().getValue()).toBe('Fix authentication bug');
     expect(issue.getUrl().getValue()).toBe(
-      'https://github.com/grupoboticario/repo/issues/42'
+      'https://github.com/nome-do-owner/repo/issues/42'
     );
     expect(issue.getBody()).toBe('This is a serious bug');
     expect(issue.getLabels()).toEqual(['critical', 'security']);
@@ -138,7 +138,7 @@ describe('Issue', () => {
     const issue = Issue.create(
       42,
       'Fix bug',
-      'https://github.com/grupoboticario/repo/issues/42',
+      'https://github.com/nome-do-owner/repo/issues/42',
       'Bug description'
     );
 
@@ -150,7 +150,7 @@ describe('Issue', () => {
     const issue = Issue.create(
       42,
       'Fix bug',
-      'https://github.com/grupoboticario/repo/issues/42',
+      'https://github.com/nome-do-owner/repo/issues/42',
       'Description',
       ['label1'],
       ['assignee1']
@@ -170,19 +170,19 @@ describe('Issue', () => {
     const issue1 = Issue.create(
       42,
       'Title 1',
-      'https://github.com/grupoboticario/repo/issues/42',
+      'https://github.com/nome-do-owner/repo/issues/42',
       'Body 1'
     );
     const issue2 = Issue.create(
       42,
       'Title 2',
-      'https://github.com/grupoboticario/repo/issues/42',
+      'https://github.com/nome-do-owner/repo/issues/42',
       'Body 2'
     );
     const issue3 = Issue.create(
       43,
       'Title 1',
-      'https://github.com/grupoboticario/repo/issues/43',
+      'https://github.com/nome-do-owner/repo/issues/43',
       'Body 1'
     );
 
@@ -192,13 +192,13 @@ describe('Issue', () => {
 
   it('should throw when creating with invalid number', () => {
     expect(() =>
-      Issue.create(0, 'Title', 'https://github.com/grupoboticario/repo/issues/0', 'Body')
+      Issue.create(0, 'Title', 'https://github.com/nome-do-owner/repo/issues/0', 'Body')
     ).toThrow();
   });
 
   it('should throw when creating with invalid title', () => {
     expect(() =>
-      Issue.create(42, '', 'https://github.com/grupoboticario/repo/issues/42', 'Body')
+      Issue.create(42, '', 'https://github.com/nome-do-owner/repo/issues/42', 'Body')
     ).toThrow();
   });
 

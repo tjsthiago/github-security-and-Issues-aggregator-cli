@@ -13,7 +13,7 @@ This project is built with **Node.js** and **TypeScript**, following **Domain-Dr
 
 ## Project Objective
 
-A **Command Line Interface (CLI)** tool written in TypeScript, oriented around Domain-Driven Design principles. The project acts as a **Fetcher** and **Aggregator** to consolidate GitHub Issues and Dependabot Alerts from a private GitHub repository (e.g., `grupoboticario/pl-plataforma-logistica-fiscal-issuer`). The tool transforms raw data into a unified **Report** in Markdown format, facilitating vulnerability analysis and resolution SLA tracking.
+A **Command Line Interface (CLI)** tool written in TypeScript, oriented around Domain-Driven Design principles. The project acts as a **Fetcher** and **Aggregator** to consolidate GitHub Issues and Dependabot Alerts from a private GitHub repository (e.g., `nome-do-owner/nome-do-repositorio`). The tool transforms raw data into a unified **Report** in Markdown format, facilitating vulnerability analysis and resolution SLA tracking.
 
 ---
 
