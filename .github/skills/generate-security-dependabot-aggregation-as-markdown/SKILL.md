@@ -119,18 +119,43 @@ Crie o arquivo no caminho resolvido no passo anterior com a seguinte estrutura:
 
 ## Alerta #1
 
-| Campo              | Valor                            |
-|--------------------|----------------------------------|
-| **Número**         | 1                                |
-| **Pacote**         | nome-do-pacote                   |
-| **Ecossistema**    | npm / pip / maven / etc.         |
-| **Versão afetada** | x.y.z                            |
-| **Versão segura**  | a.b.c                            |
-| **Severidade**     | critical / high / medium / low   |
-| **CVE / GHSA**     | CVE-XXXX-XXXX ou GHSA-xxxx-xxxx  |
-| **Resumo**         | Breve descrição da vulnerabilidade |
-| **URL**            | Link para o advisory             |
-| **Status**         | open                             |
+| Campo                  | Valor                                          |
+|------------------------|------------------------------------------------|
+| **Número**             | 1                                              |
+| **Pacote**             | nome-do-pacote                                 |
+| **Ecossistema**        | npm / pip / maven / etc.                       |
+| **Manifest**           | caminho/para/manifest                          |
+| **Relacionamento**     | direct / transitive                            |
+| **Escopo**             | runtime / development                          |
+| **Versão afetada**     | < x.y.z                                        |
+| **Versão segura**      | a.b.c                                          |
+| **Severidade**         | critical / high / medium / low                 |
+| **CVSS Score**         | 9.8                                            |
+| **CVSS Vector**        | CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H  |
+| **CVSS v4 Score**      | 9.3                                            |
+| **CVSS v4 Vector**     | CVSS:4.0/...                                   |
+| **EPSS Percentual**    | 0.00031                                        |
+| **EPSS Percentil**     | 0.09044                                        |
+| **CWEs**               | CWE-79: Cross-site Scripting, ...              |
+| **CVE**                | CVE-XXXX-XXXX                                  |
+| **GHSA**               | GHSA-xxxx-xxxx-xxxx                            |
+| **Identificadores**    | GHSA-xxxx-xxxx-xxxx, CVE-XXXX-XXXX             |
+| **Resumo**             | Título curto da vulnerabilidade                |
+| **Publicado em**       | YYYY-MM-DD                                     |
+| **Atualizado em**      | YYYY-MM-DD                                     |
+| **URL**                | Link para o advisory                           |
+| **Status**             | open                                           |
+| **Criado em**          | YYYY-MM-DD                                     |
+| **Alerta atualizado**  | YYYY-MM-DD                                     |
+
+**Referências:**
+
+- https://link-referencia-1
+- https://link-referencia-2
+
+**Descrição completa:**
+
+Descrição completa da vulnerabilidade exatamente como está no GitHub, sem nenhuma modificação ou truncamento.
 
 ---
 
@@ -151,23 +176,46 @@ Confirme ao usuário com uma mensagem como:
 
 ## Mapeamento dos campos JSON → Markdown
 
-| Campo Markdown     | Caminho no JSON                                              |
-|--------------------|--------------------------------------------------------------|
-| Número             | `.number`                                                    |
-| Pacote             | `.dependency.package.name`                                   |
-| Ecossistema        | `.dependency.package.ecosystem`                              |
-| Versão afetada     | `.dependency.manifest_path` + `.security_vulnerability.vulnerable_version_range` |
-| Versão segura      | `.security_vulnerability.first_patched_version.identifier`  |
-| Severidade         | `.security_advisory.severity`                                |
-| CVE / GHSA         | `.security_advisory.cve_id` ou `.security_advisory.ghsa_id` |
-| Resumo             | `.security_advisory.summary`                                 |
-| URL                | `.html_url`                                                  |
-| Status             | `.state`                                                     |
+| Campo Markdown        | Caminho no JSON                                                        |
+|-----------------------|------------------------------------------------------------------------|
+| Número                | `.number`                                                              |
+| Pacote                | `.dependency.package.name`                                             |
+| Ecossistema           | `.dependency.package.ecosystem`                                        |
+| Manifest              | `.dependency.manifest_path`                                            |
+| Relacionamento        | `.dependency.relationship`                                             |
+| Escopo                | `.dependency.scope`                                                    |
+| Versão afetada        | `.security_vulnerability.vulnerable_version_range`                     |
+| Versão segura         | `.security_vulnerability.first_patched_version.identifier`             |
+| Severidade            | `.security_advisory.severity`                                          |
+| CVSS Score            | `.security_advisory.cvss.score`                                        |
+| CVSS Vector           | `.security_advisory.cvss.vector_string`                                |
+| CVSS v4 Score         | `.security_advisory.cvss_severities.cvss_v4.score`                     |
+| CVSS v4 Vector        | `.security_advisory.cvss_severities.cvss_v4.vector_string`             |
+| EPSS Percentual       | `.security_advisory.epss.percentage`                                   |
+| EPSS Percentil        | `.security_advisory.epss.percentile`                                   |
+| CWEs                  | `.security_advisory.cwes[].cwe_id` + `.cwes[].name` (concatenados)    |
+| CVE                   | `.security_advisory.cve_id`                                            |
+| GHSA                  | `.security_advisory.ghsa_id`                                           |
+| Identificadores       | `.security_advisory.identifiers[].type` + `.value` (concatenados)     |
+| Resumo                | `.security_advisory.summary`                                           |
+| Descrição completa    | `.security_advisory.description` (conteúdo completo, sem truncamento) |
+| Referências           | `.security_advisory.references[].url` (uma por linha)                  |
+| Publicado em          | `.security_advisory.published_at` (formatar como YYYY-MM-DD)           |
+| Atualizado em (adv.)  | `.security_advisory.updated_at` (formatar como YYYY-MM-DD)             |
+| URL                   | `.html_url`                                                            |
+| Status                | `.state`                                                               |
+| Criado em             | `.created_at` (formatar como YYYY-MM-DD)                               |
+| Alerta atualizado     | `.updated_at` (formatar como YYYY-MM-DD)                               |
 
 ## Tratamento de Casos Especiais
 
 - Se **nenhum alerta aberto** for encontrado, gere o arquivo informando: `Nenhum alerta aberto encontrado para este repositório.`
 - Se o campo `first_patched_version` for `null`, exiba `Sem correção disponível`.
-- Se `cve_id` for `null`, use o valor de `ghsa_id` como identificador.
+- Se `cve_id` for `null`, exiba `—` no campo CVE.
+- Se `cvss_v4.score` for `0` ou `vector_string` for `null`, exiba `—` nos campos correspondentes.
+- Se `epss` for `null`, exiba `—` nos campos de EPSS.
+- Se `cwes` for vazio, exiba `—` no campo CWEs.
+- Se `references` for vazio, omita a seção **Referências:**.
+- O campo `description` deve ser inserido **na íntegra**, sem truncamentos, resumos ou omissões. Todo o conteúdo disponível no GitHub deve estar presente no arquivo gerado.
 - Se a API retornar erro 404, informe ao usuário que o repositório não existe ou que você não tem permissão de acesso.
 - Se a API retornar erro 403, informe que é necessário autenticar com `gh auth login` e ter permissão `security_events` no repositório.
